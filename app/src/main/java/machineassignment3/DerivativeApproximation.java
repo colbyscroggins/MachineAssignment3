@@ -33,13 +33,24 @@ public class DerivativeApproximation {
             // Calculate the absolute error
             double absoluteError = Math.abs(approximateDerivative - knownDerivative);
 
-            // Print the results in a formatted table
-            System.out.printf("|2^-%02d | %13.8f | %13.8f | %13.8f | %13.8f |%n", 
-                i, 
-                x, 
-                approximateDerivative, 
-                knownDerivative, 
-                absoluteError);
+            printTable(x, knownDerivative, i, approximateDerivative, absoluteError);
         }
+    }
+
+    /**
+     * Helper method to print the results in a formatted table.
+     * @param x The value of x for which the derivative is being approximated.
+     * @param knownDerivative The known derivative value (cos(1)).
+     * @param i The current iteration index (used to calculate h).
+     * @param approximateDerivative The approximated derivative value for the current h.
+     * @param absoluteError The absolute error between the approximated derivative and the known derivative.
+     */
+    private static void printTable(double x, double knownDerivative, int i, double approximateDerivative, double absoluteError) {
+        System.out.printf("|2^-%02d | %13.8f | %13.8f | %13.8f | %13.8f |%n", 
+            i, 
+            x, 
+            approximateDerivative, 
+            knownDerivative, 
+            absoluteError);
     }
 }
