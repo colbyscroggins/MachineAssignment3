@@ -9,7 +9,7 @@ public class DerivativeApproximation {
     /**
      * This program computes an approximate value for the derivative of f(x) = sin(x) using the 
      * finite difference formula: f'(x) ≈ (f(x + h) - f(x)) / h.
-     * The program computes an approximate derivative for a range of values(h) from 1/2 to 1/2^30 
+     * The program computes an approximate derivative for a range of values (h) from 1/2 to 1/2^30 
      * and computes the absolute error compared to the known derivative for f'(x) using cos(1).
      * @param args Command-line arguments (not used in this program).
      */
